@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        /*
+        console.log(3 > 5 - 5);
+
+        console.log(5 === '5.00');
+
+
+        const age = 15;
+
+        if (false) {
+            console.log("This is true!");
+        } else {
+            console.log("This is false!");
+        }
+
+        if (age >= 16) {
+            console.log('You can drive!');
+            console.log('Congrats')
+        } else if (age >= 14) {
+            console.log('Almost there!');
+        } else {
+            console.log('You cannot drive yet!');
+        }
+        */
+
+        /*
+        console.log(true && true);
+        console.log(true || false);
+        console.log(!true);
+        */
+
+        /*
+        if (5) {
+            console.log('truthy! ');
+        }
+
+        const cartQuantity = 5;
+
+        if (cartQuantity) {
+            console.log('Cart has products');
+        }
+
+        const hour = '11:11';
+        const name = 'Tomas';
+
+        if (hour >= '06:00' && hour <= '12:00') {
+            console.log(`Good Morning, ${name}!`);
+        } else if (hour > '13:00' && hour <= '18:00') {
+            console.log(`Good Afternoon, ${name}!`);
+        } else {
+            console.log(`Good Evening, ${name}!`);
+        }
+
+        const age = 65;
+        const isHoliday = true;
+
+        if ((age <= 6 || age >= 65) && isHoliday) {
+            console.log('You get the discount!');
+        } else {
+            console.log('No discount for you!');
+        } */
+
+        const randomNumber = Math.random();
+        let result = '';
+        const guess = 'Heads!';
+
+        if (randomNumber <= 0.5) {
+            result = 'Heads!';
+        } else {
+            result = 'Tails!';
+        }
+
+        if (guess === result) {
+            console.log('You win!');
+        } else {
+            console.log('You lose!');
+        }
+
+    </script>
+</body>
+
+</html>
