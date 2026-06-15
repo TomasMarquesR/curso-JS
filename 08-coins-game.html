@@ -14,14 +14,23 @@
 <body>
 
     <button onclick="
+        document.querySelector('.js-coins-game')
+            .innerHTML = `You chose Heads`
       playGame('heads')
     ">Heads</button>
 
     <button onclick="
+        document.querySelector('.js-coins-game')
+            .innerHTML = `You chose Tails`
          playGame('tails')
     ">Tails</button>
+    <p class="js-coins-game"></p>
 
     <script>
+        document.querySelector('.js-coins-game')
+            .innerHTML = `You chose ${guess}`
+
+
         let score1 = JSON.parse(localStorage.getItem('score1')) || {
             wins: 0,
             losses: 0

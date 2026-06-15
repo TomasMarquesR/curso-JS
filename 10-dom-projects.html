@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <link rel="stylesheet" href="styles/10-dom-projects.css">
+
+</head>
+
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+       subscribe();
+    " class="js-subscribe-button subscribe-button">Subscribe</button>
+
+
+
+    <p>Amazon Shipping Calculator</p>
+    <input type="text" placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
+        handleCostKeydown(event);
+    ">
+    <button onclick="
+        calculateTotal();
+    " class="calculate-button">Calculate</button>
+
+    <p class="js-total-cost"></p>
+    <p class="js-error-message error-message"></p>
+
+
+    <button class="amazon-button js-button-select">Add to Cart</button>
+
+    <br>
+
+    <button class="uber01">Request Now</button>
+    <button class="uber02">Schedule for later</button>
+    <br>
+
+    <button class="gaming-button js-gaming" onclick="
+        gaming('.js-gaming');
+    ">Gaming</button>
+
+    <button class="gaming-button js-tech" onclick="
+        gaming('.js-tech');
+    ">Tech</button>
+
+    <button class="gaming-button js-music" onclick="
+        gaming('.js-music');
+    ">Music</button>
+
+    <script src="scripts/10-dom-projects.js"></script>
+</body>
+
+</html>

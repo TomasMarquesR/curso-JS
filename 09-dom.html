@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+
+    <button>9a</button>
+    <button class="js-9b-button">9b</button>
+    <br><br><br><br>
+
+    <input type="text" placeholder="Name" class="js-name" onkeydown="
+        keyEnter(event);
+    ">
+    <button onclick="
+        findName();
+    ">Submit</button>
+    <p class="js-nome-tela"></p>
+
+    <script>
+        function keyEnter(enter) {
+            if (event.key === 'Enter') {
+                findName();
+            }
+        }
+
+
+        function findName() {
+            const inputName = document.querySelector('.js-name')
+
+            document.querySelector('.js-nome-tela')
+                .innerHTML = `Your name is: ${inputName.value}`
+        }
+
+
+
+        console.log(document.querySelector('button'));
+        document.querySelector('.js-9b-button')
+            .innerHTML = '9b done!';
+
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button')
+            .innerHTML = 'Changed';
+
+
+        const buttonElement = document.querySelector('.js-button')
+        console.log(buttonElement);
+
+
+
+
+
+        /*
+        console.log(document.title);
+        document.title = 'changed';
+
+        console.log(document.body);
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML = '<button>Good Job!</button>';
+        */
+
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'Good Job'; */
+
+
+
+    </script>
+</body>
+
+</html>
