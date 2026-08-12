@@ -25,6 +25,8 @@
         product.price = 1200;
         console.log(product.price);
 
+        delete product.price;
+
         product.color = 'white';
         console.log(product);
         */
@@ -98,66 +100,54 @@
         console.log(method)
         */
 
-        /*const basketball = {
+        /*const product1 = {
+            name: 'basketball',
             price: 2095,
-            'delivery-time': '5 days'
+            ['delivery-time']: '3 days'
         };
-        console.log(basketball)
 
-        basketball.price = 2095 + 500;
+        product1.price += 500;
 
-        console.log(basketball.price);
-        console.log(basketball['delivery-time']);
+        console.log(product1);*/
 
-        function comparePrice(product1, product2) {
-            if (product1.price < product2.price) {
-                return product1
-            } else {
-                return product2
-            };
+
+        /*const product1 = {
+            price: 3000,
+            name: 'shirt',
         }
-        const product1 = {
-            price: 10,
-            name: 'shirt'
-        };
+
         const product2 = {
-            price: 8,
-            name: 'jeans'
-        };
+            price: 3000,
+            name: 'jeans',
+        }
 
-        console.log(comparePrice(product1, product2));*/
-
-        function isSameProduct(product1, product2) {
-            if (product1.name === product2.name && product1.price === product2.price) {
-                return true
+        function comparePrice(productA, productB) {
+            if (productA.price > productB.price) {
+                console.log(`${productB.name} is cheaper than ${productA.name}`);
+            } else if (productA.price < productB.price) {
+                console.log(`${productA.name} is cheaper than ${productB.name}`);
             } else {
-                return false
+                console.log(`${productA.name} and ${productB.name} have the same price`);
             }
-
         }
 
-        const product1 = {
-            price: 10,
-            name: 'shirt'
-        };
+        comparePrice(product1, product2); */
 
-        const product2 = {
-            price: 10,
-            name: 'shirt'
-        };
-
-        const product3 = {
-            price: 102,
-            name: 'basketball'
+        /*function isSameProduct(productA, productB) {
+            if (productA.price === productB.price && productA.name === productB.name) {
+                console.log('Os produtos e valores sao iguais')
+            } else {
+                console.log('Os produtos e valores sao diferentes')
+            }
         }
 
-        console.log(isSameProduct(product1, product2))
-        console.log(isSameProduct(product1, product3))
+        isSameProduct(product1, product2) */
 
+        const str = 'Good Morning'
+        console.log(str.toLowerCase())
 
-        console.log('HELLO'.toLowerCase())
-
-        console.log('test'.repeat(3))
+        const rep = 'test'
+        console.log(rep.repeat(3))
 
     </script>
 </body>

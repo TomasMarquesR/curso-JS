@@ -12,23 +12,55 @@
 </head>
 
 <body>
-    <button>Hello</button>
+    <button class="b1">Hello</button>
     <button class="js-button">Second Button</button>
 
-    <button>9a</button>
+    <button class=" b9a">9a</button>
     <button class="js-9b-button">9b</button>
     <br><br><br><br>
 
     <input type="text" placeholder="Name" class="js-name" onkeydown="
-        keyEnter(event);
+        getEve(event);
     ">
     <button onclick="
-        findName();
+        getName();
     ">Submit</button>
     <p class="js-nome-tela"></p>
 
     <script>
-        function keyEnter(enter) {
+        const b9a = document.querySelector('.b9a')
+        console.log(b9a)
+
+        document.querySelector('.js-9b-button').
+            innerHTML = '9b Done'
+
+        function getName() {
+            const text = document.querySelector('.js-name').value
+
+            document.querySelector('.js-nome-tela').
+                innerHTML = `Your name is: ${text}`
+
+        }
+
+        function getEve(event) {
+            if (event.key === 'Enter') {
+                getName()
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*function keyEnter(enter) {
             if (event.key === 'Enter') {
                 findName();
             }
@@ -49,13 +81,13 @@
             .innerHTML = '9b done!';
 
         console.log(document.querySelector('button').innerHTML);
-        document.querySelector('button')
+        document.querySelector('.b1')
             .innerHTML = 'Changed';
 
 
         const buttonElement = document.querySelector('.js-button')
         console.log(buttonElement);
-
+        */
 
 
 

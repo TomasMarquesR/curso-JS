@@ -1,6 +1,3 @@
-const button = document.querySelector('.js-button-select');
-console.log(button.classList.contains('js-button-select'));
-
 function handleCostKeydown(event) {
     if (event.key === 'Enter') {
         calculateTotal();
@@ -9,19 +6,20 @@ function handleCostKeydown(event) {
 
 function calculateTotal() {
     const inputElement = document.querySelector('.js-cost-input');
+    const errorM = document.querySelector('.js-error')
     let cost = Number(inputElement.value);
 
     document.querySelector('.js-total-cost')
         .innerHTML = '';
-    document.querySelector('.js-error-message')
+    document.querySelector('.js-error')
         .innerHTML = '';
 
-    if (cost < 0) {
-        document.querySelector('.js-error-message')
-            .innerHTML = 'Error: cost cannot be less than $0';
 
-        return;
+    if (cost <= 0) {
+        errorM.innerHTML = 'Error: cost cannot be less than $0'
+        return
     }
+
     if (cost < 40) {
         cost = cost + 10;
     }
@@ -42,22 +40,37 @@ function subscribe() {
     }
 }
 
-function gaming(selector) {
-    const gamingElement = document.querySelector(selector);
 
-    if (!gamingElement.classList.contains('is-toggled')) {
-        turnOffPrevius();
+const jsbtn = document.querySelector('.jsbtn')
 
-        gamingElement.classList.add('is-toggled');
+console.log(jsbtn.classList.contains('jsbtn'))
+
+/*function clickbtn(botao1, botao2, botao3) {
+    const btn1 = document.querySelector(botao1)
+    const btn2 = document.querySelector(botao2)
+    const btn3 = document.querySelector(botao3)
+
+    btn1.classList.remove('is-toggled')
+    btn2.classList.remove('is-toggled')
+    btn3.classList.remove('is-toggled')
+
+    btn1.classList.add('is-toggled')
+}*/
+
+function clickbtn(selector) {
+    const button = document.querySelector(selector);
+    if (!button.classList.contains('is-toggled')) {
+
+        turnOffPreviousButton();
+
+        button.classList.add('is-toggled');
     } else {
-        gamingElement.classList.remove('is-toggled');
+        button.classList.remove('is-toggled');
     }
-
 }
 
-function turnOffPrevius() {
+function turnOffPreviousButton() {
     const previousButton = document.querySelector('.is-toggled');
-
     if (previousButton) {
         previousButton.classList.remove('is-toggled');
     }

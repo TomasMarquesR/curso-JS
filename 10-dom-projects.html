@@ -18,7 +18,7 @@
 
 
     <p>Amazon Shipping Calculator</p>
-    <input type="text" placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
+    <input type="number" placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
         handleCostKeydown(event);
     ">
     <button onclick="
@@ -26,28 +26,38 @@
     " class="calculate-button">Calculate</button>
 
     <p class="js-total-cost"></p>
-    <p class="js-error-message error-message"></p>
-
-
-    <button class="amazon-button js-button-select">Add to Cart</button>
+    <p class="js-error"></p>
 
     <br>
 
-    <button class="uber01">Request Now</button>
+    <button class="amazonb">Add to Cart</button>
+
+    <br>
+
+    <button class="uber01">Request now</button>
     <button class="uber02">Schedule for later</button>
+
+    <br><br>
+
+    <button class="jsbtn">Test</button>
+
     <br>
 
-    <button class="gaming-button js-gaming" onclick="
-        gaming('.js-gaming');
+    <button class="gaming" onclick="
+        clickbtn('.gaming', '.music-js', '.tech-js')
     ">Gaming</button>
 
-    <button class="gaming-button js-tech" onclick="
-        gaming('.js-tech');
+    <button class="music-js" onclick="
+        clickbtn('.music-js', '.gaming', '.tech-js')
+    ">Music</button>
+
+    <button class="tech-js" onclick="
+        clickbtn('.tech-js', '.gaming', '.music-js')
     ">Tech</button>
 
-    <button class="gaming-button js-music" onclick="
-        gaming('.js-music');
-    ">Music</button>
+
+
+
 
     <script src="scripts/10-dom-projects.js"></script>
 </body>

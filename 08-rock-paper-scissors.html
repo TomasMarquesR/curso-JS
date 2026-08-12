@@ -35,7 +35,7 @@
     ">Reset Score</button>
 
     <script>
-        let score = JSON.parse(localStorage.getItem('score')) || {
+        let score = JSON.parse(localStorage.getItem('score')) || {   // || é um operador lógico que retorna o valor do lado direito se o valor do lado esquerdo for falso (null, undefined, 0, false, etc.)
             wins: 0,
             losses: 0,
             ties: 0

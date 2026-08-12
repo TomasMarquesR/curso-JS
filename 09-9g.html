@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Projects</title>
+    <title>Challenge 9g</title>
     <style>
 
     </style>
@@ -15,12 +15,14 @@
     <p>Youtube Subscribe Button</p>
     <button onclick="
        subscribe();
-    " class="js-subscribe-button">Subscribe</button>
+    " class="js-subscribe-button">Inscrever-se</button>
 
 
 
     <p>Amazon Shipping Calculator</p>
-    <input type="text" placeholder="Cost of Order" class="js-cost-input" onkeydown="
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input type="number" placeholder="Cost of Order" class="js-cost-input" onkeydown="
         handleCostKeydown(event);
     ">
     <button onclick="
@@ -40,23 +42,32 @@
             const inputElement = document.querySelector('.js-cost-input');
             let cost = Number(inputElement.value);
 
-            let NewNumber = (cost.toFixed(2))
-
-            if (cost < 40) {
+            if (cost <= 0) {
+                alert(`ERRO! Valor Invalido`)
+                document.querySelector('.js-total-cost')
+                    .innerHTML = ``
+                return
+            } else if (cost < 40) {
                 cost = cost + 10;
+                let rcost = Number(cost.toFixed(2));
+                document.querySelector('.js-total-cost')
+                    .innerHTML = `$${rcost}`
+            } else {
+                let rcost = Number(cost.toFixed(2));
+                document.querySelector('.js-total-cost')
+                    .innerHTML = `$${rcost}`
             }
 
-            document.querySelector('.js-total-cost')
-                .innerHTML = `$${NewNumber}`
+
         }
 
         function subscribe() {
             const buttonElement = document.querySelector('.js-subscribe-button');
 
-            if (buttonElement.innerText === 'Subscribe') {
-                buttonElement.innerHTML = 'Subscribed';
+            if (buttonElement.innerText === 'Inscrever-se') {
+                buttonElement.innerHTML = 'Inscrito';
             } else {
-                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.innerHTML = 'Inscrever-se';
             }
         }   
     </script>
